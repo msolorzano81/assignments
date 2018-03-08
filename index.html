@@ -1,3 +1,8 @@
+
+</script>
+</body>
+</html>
+=======
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -19,7 +24,6 @@
         var wins= 0;
         var losses= 0;
         var guesses = 12;
-        var guessedletters = [];
         
 
         // document.onkeyup= function(){
@@ -37,17 +41,8 @@
 
 if (userGuess === computerGuess){
     wins++;
-    guesses = 12;
-
-} else if (guesses === 0){
-    losses++;
-    guesses = 12;
-
-
 } else if (userGuess !== computerGuess){
-guesses--;
-// }else if (userGuess computerGuess === guesses){
-    // guesses++;
+losses++;
 }
 // document.getElementById('wins').innerHTML = "Wins: " + wins;
 //     document.getElementById('losses').innerHTML = "losses: " + losses;
@@ -56,7 +51,7 @@ var html =
           "<p>The computer chose: " + computerGuess + "</p>" +
           "<p>wins: " + wins + "</p>" +
           "<p>losses: " + losses + "</p>"+
-          "<p>Guesses: " + guesses + "</p>";
+          "<p>Guesses: " + guess + "</p>";
           
 
           document.querySelector("#game").innerHTML = html;
