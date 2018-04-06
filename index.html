@@ -27,10 +27,15 @@
         //     toLowerCase();
             
         document.onkeyup = function(event) {
-        var userGuess = event.key;
-            var guess = userGuess + computerGuess;
-            var computerGuess= computerChoices[Math.floor(Math.random () * computerChoices.length)];
-            
+        var blackUnicorn = event.key;
+            var guess = blackUnicorn + pickleRick;
+            var pickleRick= computerChoices[Math.floor(Math.random () * computerChoices.length)];
+            winner(blackUnicorn, pickleRick)
+            documentwrite(blackUnicorn, pickleRick)
+        }
+var winner = function(userGuess, computerGuess ){
+
+
 
             //logic for a win or loss
             if ((userGuess === "a") || (userGuess === "b") || (userGuess === "c")||(userGuess === "d")||(userGuess === "e")||(userGuess==="f")||(userGuess==="g")||(userGuess==="h")||(userGuess==="i")||(userGuess==="j")||(userGuess==="k")||(userGuess==="l")||(userGuess==="m")||(userGuess==="n")||(userGuess==="o")||(userGuess==="p")||(userGuess==="q")||(userGuess==="r")||(userGuess==="s")||(userGuess==="t")||(userGuess==="u")||(userGuess==="v")||(userGuess==="w")||(userGuess==="x")||(userGuess==="y")||(userGuess==="z")){
@@ -49,8 +54,13 @@ guesses--;
 // }else if (userGuess computerGuess === guesses){
     // guesses++;
 }
+            }
+        }
 // document.getElementById('wins').innerHTML = "Wins: " + wins;
 //     document.getElementById('losses').innerHTML = "losses: " + losses;
+var documentwrite = function(userGuess, computerGuess){
+
+
 var html =
           "<p>You chose: " + userGuess + "</p>" +
           "<p>The computer chose: " + computerGuess + "</p>" +
@@ -60,11 +70,12 @@ var html =
           
 
           document.querySelector("#game").innerHTML = html;
-
-
 }
+         
 
-};
+
+
+
 
 
 
